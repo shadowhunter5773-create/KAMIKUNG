@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>BOVIZZ — Cyber Profile</title>
+
+<!-- Google Fonts: Permanent Marker (brush logo), Orbitron (techy labels), Rajdhani (headings), Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">BOOTING PROFILE<span class="dots">...</span></p>
+  </div>
+
+  <!-- ============ BACKGROUND LAYER ============ -->
+  <div id="bg-layer">
+    <video id="bg-video" autoplay muted loop playsinline></video>
+    <div id="bg-fallback"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-vignette"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo" id="nav-logo">BOVIZZ</span>
+
+      <nav class="nav-links" id="nav-links"></nav>
+
+      <div class="nav-right">
+        <span class="nav-clock" id="nav-clock">--:--</span>
+        <span class="nav-status">
+          <span class="nav-status-dot" id="nav-status-dot"></span>
+          <span id="nav-status-text">ONLINE</span>
+        </span>
+        <button class="nav-burger" id="nav-burger" aria-label="Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-links-mobile" id="nav-links-mobile"></nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="stage">
+
+    <!-- ---------- PROFILE CARD ---------- -->
+    <div class="profile-wrap" id="profile">
+      <span class="corner-tick corner-tick-tl"></span>
+      <span class="corner-tick corner-tick-br"></span>
+    <section class="panel profile-panel hud-corners">
+
+      <div class="profile-top">
+        <div class="avatar-frame">
+          <span class="frame-decor-text" id="frame-decor-text"></span>
+          <div class="avatar-ring"></div>
+          <img id="avatar-img" class="avatar-img" src="" alt="Avatar" />
+          <span class="grid-dots" aria-hidden="true"></span>
+        </div>
+
+        <div class="identity">
+          <h1 class="username">
+            <span id="username-text">USER</span>
+            <i data-lucide="badge-check" class="verified-badge" id="verified-badge" title="Verified"></i>
+            <span class="rank-pill" id="rank-pill"></span>
+          </h1>
+
+          <p class="status-line"><span class="chevron">»</span> <span id="status-line-text">status</span></p>
+          <p class="join-date" id="join-date">Joined —</p>
+
+          <div class="stats-row" id="stats-row">
+            <div class="stat">
+              <i data-lucide="eye"></i>
+              <div class="stat-text">
+                <span class="stat-num" id="stat-views">0</span>
+                <span class="stat-label">TOTAL VIEWS</span>
+              </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <i data-lucide="users"></i>
+              <div class="stat-text">
+                <span class="stat-num" id="stat-followers">0</span>
+                <span class="stat-label">FOLLOWERS</span>
+              </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <i data-lucide="user"></i>
+              <div class="stat-text">
+                <span class="stat-num" id="stat-following">0</span>
+                <span class="stat-label">FOLLOWING</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- ---------- DISCORD ---------- -->
+    <div class="discord-stack" id="discord">
+
+      <section class="panel discord-profile-panel hud-corners">
+        <img id="discord-avatar" class="discord-avatar" src="" alt="Discord avatar" />
+        <div class="discord-profile-info">
+          <div class="discord-username-row">
+            <span id="discord-username">user</span>
+            <span class="discord-badge-pill" id="discord-badge-pill"></span>
+          </div>
+          <p class="discord-online-row"><span class="dot-online" id="discord-status-dot"></span> <span id="discord-status-text">Online</span></p>
+          <p class="discord-custom-status" id="discord-custom-status"></p>
+        </div>
+        <a class="open-discord-btn" id="discord-open-btn" href="#" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="message-circle"></i> OPEN DISCORD
+        </a>
+      </section>
+
+      <section class="panel discord-server-panel hud-corners">
+        <img id="discord-server-icon" class="discord-server-icon" src="" alt="Server icon" />
+        <div class="discord-server-info">
+          <div class="discord-server-name-row">
+            <span id="discord-server-name">Server</span>
+            <span class="server-badge-pill" id="server-badge-pill"></span>
+          </div>
+          <p class="discord-server-counts">
+            <span><span class="dot-online"></span> <span id="discord-online-count">0</span> Online</span>
+            <span><span class="dot-muted"></span> <span id="discord-member-count">0</span> Members</span>
+          </p>
+          <a class="join-server-btn" id="discord-join-btn" href="#" target="_blank" rel="noopener noreferrer">
+            JOIN SERVER <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+        <div class="discord-glyph-block">
+          <i data-lucide="message-circle"></i>
+          <span>DISCORD</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ---------- SOCIAL / CONNECT ---------- -->
+    <section class="panel connect-panel hud-corners" id="social">
+      <div class="connect-header">
+        <span class="connect-line"></span>
+        <span class="connect-title">CONNECT WITH ME</span>
+        <span class="connect-line"></span>
+      </div>
+      <div class="connect-grid" id="socials-row"></div>
+    </section>
+
+    <div class="stage-spacer" aria-hidden="true"></div>
+  </main>
+
+  <!-- ---------- FLOATING MUSIC WIDGET (bottom-left, circular, auto-loop) ---------- -->
+  <div class="music-widget" id="music-widget">
+
+    <div class="sound-hint" id="sound-hint">
+      <i data-lucide="volume-2"></i>
+      <span>แตะหน้าจอเพื่อเปิดเสียงเพลง</span>
+    </div>
+
+    <div class="music-popover hud-corners" id="music-popover">
+      <div class="popover-track">
+        <img id="popover-cover" class="popover-cover" src="" alt="Album cover" />
+        <div class="popover-meta">
+          <p class="popover-title" id="popover-title">Track title</p>
+          <p class="popover-artist" id="popover-artist">Artist</p>
+        </div>
+      </div>
+
+      <div class="popover-progress-row">
+        <span class="mp-time" id="mp-current-time">0:00</span>
+        <input type="range" id="mp-progress" class="mp-progress" min="0" max="100" value="0" />
+        <span class="mp-time" id="mp-duration">0:00</span>
+      </div>
+
+      <div class="popover-controls">
+        <button id="mp-prev" class="mp-icon-btn" title="Previous"><i data-lucide="skip-back"></i></button>
+        <button id="mp-play" class="mp-play-btn" title="Play / Pause"><i data-lucide="pause" id="mp-play-icon"></i></button>
+        <button id="mp-next" class="mp-icon-btn" title="Next"><i data-lucide="skip-forward"></i></button>
+      </div>
+    </div>
+
+    <button class="music-orb" id="music-orb" aria-label="Toggle music player" title="Now playing">
+      <span class="orb-ring"></span>
+      <img id="orb-cover" class="orb-cover" src="" alt="" />
+      <span class="orb-wave" id="orb-wave">
+        <span></span><span></span><span></span><span></span><span></span>
+      </span>
+    </button>
+  </div>
+
+  <footer class="site-footer">
+    <span id="footer-copy"></span>
+    <span id="footer-tagline"></span>
+  </footer>
+
+  <audio id="audio-el" preload="metadata"></audio>
+
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
