@@ -71,8 +71,8 @@ const SITE_CONFIG = {
     { platform: "Discord",   image: "https://cdn.simpleicons.org/discord/ffffff",   url: "https://discord.gg/hnu7GVUR9x" },
     { platform: "Facebook",  image: "https://cdn.simpleicons.org/facebook/ffffff",  url: "https://www.facebook.com/share/19Jyp9mg3p/" },
     { platform: "TikTok",    image: "https://cdn.simpleicons.org/tiktok/ffffff",    url: "https://www.tiktok.com/@kami.kung?_r=1&_t=ZS-98jU7xuWtkX" },
-    { platform: "HIWDO",     image: "H", url: "https://hiwdo.com/kamikung" }
-    { platform: "ENDEXSHOP",     image: "https://cdn.simpleicons.org/shopify/ffffff", url: "https://hiwdo.com/kamikung" }
+    { platform: "HIWDO",     image: "https://cdn.simpleicons.org/paypal/ffffff", url: "https://hiwdo.com/kamikung" },
+    { platform: "ENDEXSHOP",     image: "https://cdn.simpleicons.org/shopify/ffffff", url: "https://endexshop.xezw.xyz/categories/fpbknE0HON9f" }
   ],
 
   /* -------------------- MUSIC PLAYLIST -------------------- */
